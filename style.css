@@ -1,0 +1,182 @@
+/* 1. General y Tipografía */
+body {
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfaf5; /* Crema suave del otro proyecto */
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #212529; /* Negro oscuro */
+    color: #ffc107;           /* Amarillo/Oro */
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom: 4px solid #ffc107;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* 2. Formulario de Registro */
+#formulario {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+    border: 1px solid #eee;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #4a4a4a;
+}
+
+input, textarea {
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #ffc107;
+    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.2);
+}
+
+/* Botón principal (Guardar) */
+button#sendButton {
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    background-color: #212529;
+    color: #ffc107;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+button#sendButton:hover {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+/* 3. Contenedor de Productos */
+#productos {
+    background-color: transparent; /* Para que resalten las tarjetas */
+    padding: 1rem 0;
+}
+
+#containerProducts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* 4. Tarjetas de Producto (Estilo "Card" con Hover) */
+.card {
+    background-color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 1.2rem;
+    width: calc(33.333% - 1.5rem);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease; /* Efecto suave */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* La tarjeta flota */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin: 1rem 0 0.5rem;
+    color: #212529;
+}
+
+.card .precio {
+    font-weight: 800;
+    color: #212529;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+/* Botones de Acción dentro de la tarjeta */
+.acciones {
+    margin-top: auto;
+    display: flex;
+    gap: 0.5rem;
+    padding-top: 1rem;
+}
+
+.acciones button {
+    flex: 1;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+.acciones .edit {
+    background-color: #212529;
+    color: #ffc107;
+}
+
+.acciones .eliminate {
+    background-color: #f44336;
+    color: white;
+}
+
+/* 5. Mensajes de Feedback */
+.message {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.message.success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.message.error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+
+/* 6. Responsive */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 1.5rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+}

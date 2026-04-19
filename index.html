@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registro de productos - Angela Oliveros</title>
+</head>
+<body>
+    <header>
+        <h1>Registro de productos - Angela Oliveros</h1>
+    </header>
+    <main>
+        <section id="form">
+            <h2>Ingreso producto</h2>
+            <p id="messageForm" class="message"></p>
+            <form id="formProduct">
+                <label for="imagen">URL imagen del producto:</label>
+                <input type="url" id="imageProduct" required>
+
+                <label for="nombre">Nombre producto:</label>
+                <input type="text" id="nameProduct" required>
+
+                <label for="descripcion">Descripción producto:</label>
+                <textarea id="productDescription" required></textarea>
+
+                <label for="valor">Precio COP:</label>
+                <input type="number" id="productPrice" required>
+
+                <label for="cupon">Cupón de descuento, escribe: OFF50%:</label>
+                <input type="text" id="discountcoupon">
+
+                <div class="form-actions">
+                    <button type="submit" id="sendButton">Guardar</button>
+                </div>
+            </form>
+        </section>
+        <section id="products">
+            <h2>Productos</h2>
+            <div id="containerProducts"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
